@@ -96,39 +96,51 @@ footer {
   background-color: #e67e22; /* Change de couleur en orange foncé lors du survol */
 }
 
-/* ---- Section des compétences (icônes) ---- */
-#skills {
-  padding: 50px; /* Espacement interne pour séparer de autres sections */
-  background-color: #e0e0e0; /* Fond gris clair */
-}
 
+
+/* Styles pour la section compétences */
+/* Styles pour le titre des compétences */
 #skills h1 {
-  text-align: center; /* Centre le titre de la section */
+  text-align: center; /* Centre le texte */
+  font-weight: bold; /* Met le texte en gras */
 }
 
-.skillsContainer {
-  display: flex; /* Affiche les éléments en ligne */
-  justify-content: center; /* Centre les icônes horizontalement */
-  align-items: center; /* Centre verticalement les icônes */
-  flex-wrap: wrap; /* Permet aux icônes de passer à la ligne si nécessaire */
-  gap: 20px; /* Espace entre chaque icône */
+/* Styles pour les icônes en 3D et défilement continu */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  overflow: hidden;
+  height: 150px; /* Ajustez la hauteur selon vos besoins */
+  margin-top: 20px;
 }
 
-.skill {
-  display: flex; /* Structure en ligne pour centrer l'image */
-  align-items: center; /* Centre les icônes verticalement */
-  transition: transform 0.3s ease; /* Animation de transformation au survol */
+.icon-wrapper {
+  display: flex;
+  animation: scroll 20s linear infinite;
 }
 
-.skill img {
-  width: 70px; /* Taille de l'icône */
-  transition: transform 0.3s ease; /* Prépare une animation pour le survol */
+.icon {
+  width: 200px; /* Ajustez la taille des icônes selon vos besoins */
+  height: 100px;
+  margin: 0 20px;
+  transform: rotateY(0deg);
+  transition: transform 0.5s;
 }
 
-.skill:hover {
-  transform: translateY(-10px); /* Déplace l'icône vers le haut au survol */
+.icon-container:hover .icon {
+  transform: rotateY(360deg);
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
 /* ---- Section des projets ---- */
@@ -194,7 +206,7 @@ footer {
 
 header, main, footer {
   padding: 20px;
-  margin: 10px 0;
+  
 }
 
 header {
@@ -230,4 +242,39 @@ main {
 
 
 
+/* Styles pour la section présentation */
+#presentation {
+  padding: 50px;
+  background-color: #f9f9f9;
+}
 
+#presentation h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.presentation-block {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.presentation-block h2 {
+  margin-top: 20px;
+}
+
+.presentation-block p,
+.presentation-block ul {
+  margin-bottom: 10px;
+}
+
+.presentation-block ul {
+  padding-left: 20px;
+}
+
+.presentation-block li {
+  margin-bottom: 5px;
+}

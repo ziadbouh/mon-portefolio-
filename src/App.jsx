@@ -1,15 +1,16 @@
 
 import './App.css';
 
+
+
 function App() {
+  
   return (
     <div className="App">
-     
+
 
     <header>
-    <section className="banner">
-       
-        </section>
+   
       <nav className="navbar">
         <ul>
           <li><a href="#contact">Contact</a></li>
@@ -18,38 +19,66 @@ function App() {
       </nav>
     </header>
  
-    <main>
+      <main>
+     
+    <section id="presentation">
     
-    <h1 id="titre">Bienvenue sur mon portfolio !</h1>
-      <section id="about">
-       <h1> a propos de moi !</h1>
-        <p className="p">Bonjour et bienvenue sur mon portfolio !
-        Je m'appelle Ziad, et je suis actuellement en formation de développeur web et web mobile, avec une spécialisation en accessibilité. Mon parcours est un peu atypique, mais chaque étape m'a rapproché de ce domaine passionnant.
-        <br />
-        Au départ, j'ai fait des etudes dans la logistique, mais je ne me sentais pas totalement épanoui. Lors d'une formation, j'ai eu l'opportunité de faire un stage, et c'est là que j'ai découvert le monde du développement web. Ce fut une révélation, et depuis, je me suis lancé dans l'apprentissage des langages de programmation en autodidacte. <br />
-        <br />
-        Aujourd'hui, j'ai développé des compétences solides en HTML, CSS, JavaScript, Node.js, React, SQL, et bien plus encore. Bien que je sois plus à l'aise en front-end, je continue de me former en back-end pour devenir un développeur polyvalent.
+  <h1>Présentation</h1>
+  <div className="presentation-block">
+    <p>Je m'appelle Ziad, développeur web freelance passionné et polyvalent. Spécialisé dans le développement web et web mobile, je mets un point d'honneur à créer des solutions modernes, accessibles et sur-mesure pour mes clients.</p>
+    <h2>Mon Parcours</h2>
+    <p>Mon chemin vers le développement web est tout sauf conventionnel. J'ai commencé par des études en logistique, mais ce domaine ne me permettait pas de m'épanouir pleinement. Une opportunité de stage lors d'une formation m'a ouvert les portes du développement web, une véritable révélation. Depuis, je me suis formé avec acharnement, combinant apprentissage autodidacte et formation spécialisée, pour devenir le professionnel que je suis aujourd'hui.</p>
+    <h2>Mes Compétences</h2>
+    <p>En front-end :</p>
+    <ul>
+      <li>HTML, CSS, SASS pour des designs modernes et soignés</li>
+      <li>JavaScript et React pour des interfaces dynamiques et interactives</li>
+      <li>Figma pour le prototypage et la conception UI/UX</li>
+    </ul>
+    <p>En back-end :</p>
+    <ul>
+      <li>Node.js, Express.js pour des applications robustes et performantes</li>
+      <li>SQL et PostgreSQL pour une gestion optimale des bases de données</li>
+      <li>Développement d’API RESTful pour des intégrations fluides</li>
+    </ul>
+    <p>En administration système :</p>
+    <ul>
+      <li>Maîtrise de Linux, Git et GitHub pour une gestion efficace des projets et une collaboration sans faille</li>
+    </ul>
+    <p>En optimisation :</p>
+    <ul>
+      <li>Excellente maîtrise du SEO pour améliorer la visibilité des sites web</li>
+      <li>Expertise en accessibilité pour garantir une expérience utilisateur inclusive et conforme aux normes.</li>
+    </ul>
+    <h2>Mes Passions</h2>
+    <p>Au-delà du développement web, je suis passionné par la cybersécurité et l’intelligence artificielle. Ces domaines me fascinent par leur potentiel à transformer le monde tout en garantissant la sécurité des données et des utilisateurs. Je suis constamment en quête de nouvelles connaissances pour élargir mes horizons et intégrer ces technologies dans mes projets.</p>
+    <h2>Pourquoi travailler avec moi ?</h2>
+    <p> Chaque projet est une aventure unique, et je m’investis pleinement pour dépasser vos attentes.</p>
+    <p>Polyvalence : Que ce soit pour un site vitrine, une application web ou une solution sur-mesure, je maîtrise un large éventail de technologies.</p>
+    <p>Accessibilité : Sensibilisé à l’importance de l’inclusion numérique, je m’assure que vos projets soient accessibles à tous.</p>
+    <p> Freelance, je suis flexible et réactif pour répondre à vos besoins dans les meilleurs délais.</p>
+    <p>Merci de visiter mon portfolio ! Si vous souhaitez collaborer ou simplement discuter de vos idées, je serais ravi d'échanger avec vous. N'hésitez pas à me contacter, et construisons ensemble vos projets ambitieux.</p>
+  </div>
+</section>
+<section id="skills">
+  <h1>Mes Compétences</h1>
+  
+  <div className="icon-container">
+            <div className="icon-wrapper">
+              <img src="./image/html-5.png" alt="HTML5" className="icon" />
+              <img src="./image/css-3.png" alt="CSS3" className="icon" />
+              <img src="./image/js.png" alt="JavaScript" className="icon" />
+              <img src="./image/icons8-réagir-40.png" alt="React" className="icon" />
+              <img src="./image/nodejs.png" alt="Node.js" className="icon" />
+              <img src="./image/serveur-sql.png" alt="SQL Server" className="icon" />
+              <img src="./image/docker.png" alt="Docker" className="icon" />
+              <img src="./image/developpement.png" alt="Développement" className="icon" />
+            </div>
+          </div>
+        
+  
+</section>
 
-En plus du développement web, la cybersécurité et l'intelligence artificielle me passionnent. J'adore explorer comment ces technologies peuvent transformer notre monde et renforcer la sécurité des applications et des données. Chaque projet est pour moi une occasion de progresser et d'approfondir mes compétences.
-
-Le développement web est bien plus qu'un métier : c'est une véritable passion qui me pousse à me dépasser chaque jour. Merci de visiter mon portfolio, et n'hésitez pas à me contacter pour échanger sur nos intérêts communs !
-
-</p>
-      </section>
-
-      <section id="skills">
-        <h1>Mes Compétences</h1>
-        <div className="skillsContainer">
-          <div className="skill"><img src="./image/html-5.png" alt="HTML5" /></div>
-          <div className="skill"><img src="./image/css-3.png" alt="CSS3" /></div>
-          <div className="skill"><img src="./image/js.png" alt="JavaScript" /></div>
-          <div className="skill"><img src="./image/icons8-réagir-40.png" alt="React" /></div>
-          <div className="skill"><img src="./image/nodejs.png" alt="Node.js" /></div>
-          <div className="skill"><img src="./image/serveur-sql.png" alt="SQL Server" /></div>
-          <div className="skill"><img src="./image/docker.png" alt="Docker" /></div>
-          <div className="skill"><img src="./image/developpement.png" alt="Développement" /></div>
-        </div>
-      </section>
 
       <section id="projects">
         <h1>Mes Projets</h1>
