@@ -65,6 +65,11 @@ function App() {
   
   <div className="icon-container">
             <div className="icon-wrapper">
+              <img src="./image/figma.png" alt="figma"className='icon' />
+              <img src="./image/linux.png" alt="linux" className='icon' />
+
+
+
               <img src="./image/html-5.png" alt="HTML5" className="icon" />
               <img src="./image/css-3.png" alt="CSS3" className="icon" />
               <img src="./image/js.png" alt="JavaScript" className="icon" />

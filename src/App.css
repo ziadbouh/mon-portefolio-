@@ -112,17 +112,17 @@ footer {
   align-items: center;
   perspective: 1000px;
   overflow: hidden;
-  height: 150px; /* Ajustez la hauteur selon vos besoins */
+  height: 160px; /* Ajustez la hauteur selon vos besoins */
   margin-top: 20px;
 }
 
 .icon-wrapper {
   display: flex;
-  animation: scroll 20s linear infinite;
+  animation: scroll 5s linear infinite;
 }
 
 .icon {
-  width: 200px; /* Ajustez la taille des icônes selon vos besoins */
+  width: 100px; /* Ajustez la taille des icônes selon vos besoins */
   height: 100px;
   margin: 0 20px;
   transform: rotateY(0deg);
