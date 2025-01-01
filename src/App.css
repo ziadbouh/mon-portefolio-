@@ -1,280 +1,234 @@
-/* ---- Styles de base pour le corps de la page ---- */
+/* Styles globaux */
 body {
-  font-family: 'Arial', sans-serif; /* Police de caractères principale */
-  margin: 0; /* Supprime les marges par défaut du body */
-  padding: 0; /* Supprime les espaces internes par défaut */
-  background-color: #f0f0f0; /* Couleur de fond gris clair pour l'ensemble de la page */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
 
-
-header {
-  background-color: #333; /* Couleur de fond gris foncé */
-  
-  position: sticky; /* Positionnement collant, l'en-tête reste en haut lors du défilement */
-  top: 0; /* Colle l'en-tête en haut de la page */
-  width: 100%; /* Prend toute la largeur de la page */
-  z-index: 100; /* Priorité d'affichage pour qu'il reste au-dessus d'autres éléments */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre pour donner de la profondeur */
-  display: flex; /* Utilisation de flexbox pour centrer le contenu */
-  justify-content: center; /* Centre horizontalement le contenu */
-  align-items: center; /* Centre verticalement le contenu */
-  text-align: center; /* Centre le texte */
+.App {
+  text-align: center;
 }
 
-/* ---- Styles de navigation ---- */
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+}
 
-nav ul {
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  list-style-type: none;
-  padding: 0;
 }
 
-nav ul li {
+.navbar li {
   margin: 0 1rem;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none; /* Supprime le soulignement des liens */
-  font-weight: bold; /* Met le texte en gras */
-  transition: color 0.3s; /* Ajoute une transition pour le changement de couleur */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav a:hover {
-  color: #ff6347; /* Change la couleur au survol */
+.navbar a:hover {
+  color: #ff6347;
 }
 
-
-/* ---- Formulaire de contact ---- */
-/* Taille réduite de l'icône et effet de flottement au clic */
-.social-links img {
-  width: 50px; /* ou la taille souhaitée */
-  height: auto;
+/* Présentation */
+.presentation-block {
+  padding: 2rem;
+  background-color: white;
+  margin: 1rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-footer {
-  background-color: #f1f5f9;
-  color: #333;
-  padding: 20rem;
-  text-align: center;
-  
+.presentation-block h1,
+.presentation-block h2 {
+  margin-top: 1rem;
 }
 
-#contact-form {
-  padding: 50px; /* Espacement interne généreux autour du formulaire */
-  background-color: #333; /* Couleur de fond gris foncé */
-  color: white; /* Couleur blanche pour le texte */
-  text-align: center; /* Centrage du texte à l'intérieur du formulaire */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre pour donner un effet de profondeur */
-  border-radius: 10px; /* Arrondit les coins du formulaire */
+.presentation-block p,
+.presentation-block ul {
+  margin-bottom: 1rem;
 }
 
-#contact-form input, #contact-form textarea {
-  display: block; /* Place chaque élément sur une ligne différente */
-  width: 100%; /* Prend toute la largeur disponible */
-  max-width: 400px; /* Limite la largeur maximale des champs */
-  margin: 10px auto; /* Espacement vertical et centrage horizontal */
-  padding: 10px; /* Espacement interne dans les champs */
-  border: none; /* Retire la bordure par défaut */
-  border-radius: 5px; /* Arrondit légèrement les coins */
+.presentation-block ul {
+  padding-left: 1.5rem;
 }
 
-#contact-form button {
-  padding: 10px 20px; /* Espacement interne pour le bouton */
-  border: none; /* Retire la bordure par défaut */
-  background-color: #f39c12; /* Couleur de fond jaune-orangée */
-  color: white; /* Couleur blanche pour le texte */
-  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-  transition: background-color 0.3s ease; /* Animation pour le changement de couleur au survol */
+.presentation-block li {
+  margin-bottom: 0.5rem;
 }
 
-#contact-form button:hover {
-  background-color: #e67e22; /* Change de couleur en orange foncé lors du survol */
+/* Compétences */
+#skills {
+  padding: 2rem;
+  background-color: #e0e0e0;
 }
 
-
-
-/* Styles pour la section compétences */
-/* Styles pour le titre des compétences */
 #skills h1 {
-  text-align: center; /* Centre le texte */
-  font-weight: bold; /* Met le texte en gras */
+  text-align: center;
+  font-weight: bold;
 }
 
-/* Styles pour les icônes en 3D et défilement continu */
 .icon-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 1000px;
-  overflow: hidden;
-  height: 160px; /* Ajustez la hauteur selon vos besoins */
-  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .icon-wrapper {
   display: flex;
-  animation: scroll 5s linear infinite;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .icon {
-  width: 100px; /* Ajustez la taille des icônes selon vos besoins */
+  width: 100px;
   height: 100px;
-  margin: 0 20px;
-  transform: rotateY(0deg);
+  margin: 1rem;
   transition: transform 0.5s;
 }
 
-.icon-container:hover .icon {
+.icon:hover {
   transform: rotateY(360deg);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
-/* ---- Section des projets ---- */
+/* Projets */
+/* Projets */
 #projects {
-  padding: 50px; /* Espacement interne */
-  background-color: #fff; /* Fond blanc pour les projets */
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 15px; /* Ajout d'un arrondi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+  backdrop-filter: blur(10px); /* Ajout d'un effet de flou */
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 #projects h1 {
-  text-align: center; /* Centre le titre de la section */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
 #projects ul {
-  display: flex; /* Affiche les projets en ligne */
-  justify-content: center; /* Centre les projets horizontalement */
-  flex-wrap: wrap; /* Permet aux projets de passer à la ligne */
-  gap: 6rem; /* Espace entre chaque projet */
-}
-
-#projects li {
-  list-style: none; /* Retire les puces */
-  text-align: center; /* Centre le texte des projets */
-  background-color: #f0f0f0; /* Couleur de fond des blocs de projet */
-  border-radius: 10px; /* Coins arrondis */
-  padding: 30px; /* Espacement interne */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner de la profondeur */
-  transition: transform 0.3s ease; /* Animation pour le mouvement au survol */
-}
-
-#projects li:hover {
-  transform: translateY(-5px); /* Déplacement vers le haut au survol */
-}
-/* Styles pour les projets */
-#projects ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 #projects li {
-  margin: 20px 0;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre aux éléments */
+  transition: transform 0.3s, box-shadow 0.3s; /* Ajout d'une transition pour l'effet de survol */
+}
+
+#projects li:hover {
+  transform: translateY(-5px); /* Déplacement vers le haut lors du survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmentation de l'ombre lors du survol */
+}
+
+#projects img,
+#projects video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre aux images et vidéos */
+  transition: transform 0.3s, box-shadow 0.3s; /* Ajout d'une transition pour l'effet de survol */
+}
+
+#projects img:hover,
+#projects video:hover {
+  transform: scale(1.05); /* Agrandissement lors du survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmentation de l'ombre lors du survol */
+}
+
+/* Formulaire de contact */
+#contact-form {
+  padding: 2rem;
+  background-color: white;
+  margin: 1rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#projects img, #projects video {
-  width: 100%;
-  max-width: 600px; /* Ajustez cette valeur selon vos besoins */
-  height: auto;
- 
+.input-field {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#projects h2 {
-  text-align: center;
-}
-
-#titre {
-  text-align: center;   /* je centre le titre */
-  color: blue;
-  text-shadow: #333 orange;
-}
-
-
-header, main, footer {
-  padding: 20px;
-  
-}
-
-header {
-  border-bottom: 2px solid #e0e0e0;
-}
-
-main {
-  border-bottom: 2px solid #e0e0e0;
-}
-#sendMessage-btn {
-  background-color: #3b82f6;
+.sendMessage-btn {
+  padding: 0.5rem 1rem;
+  background-color: #333;
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
-#sendMessage-btn:hover {
-  background-color: #2563eb;
+.sendMessage-btn:hover {
+  background-color: #ff6347;
 }
 
-/* partie projet */
-#skill img, #projects img {
-  transition: transform 0.3s ease;
+/* Liens sociaux */
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-#skill img:hover, #projects img:hover {
-  transform: scale(1.1);
+.social-links a {
+  margin: 0 1rem;
 }
 
-
-
-
-
-/* Styles pour la section présentation */
-#presentation {
-  padding: 50px;
-  background-color: #f9f9f9;
+.social-links img {
+  width: 40px;
+  height: 40px;
 }
 
-#presentation h1 {
+/* Mentions légales */
+.mentions-legales {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 1rem;
 }
 
-.presentation-block {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 0 auto;
-}
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
 
-.presentation-block h2 {
-  margin-top: 20px;
-}
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
 
-.presentation-block p,
-.presentation-block ul {
-  margin-bottom: 10px;
-}
-
-.presentation-block ul {
-  padding-left: 20px;
-}
-
-.presentation-block li {
-  margin-bottom: 5px;
+  .input-field {
+    width: 100%;
+  }
 }
